@@ -114,6 +114,7 @@ const ClientForm = () => {
         age: parseInt(age), // Store age as a number
         gender,
         diseases,
+        createdAt: new Date().toISOString()
       });
       
       setLoading(false);
