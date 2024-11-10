@@ -11,3 +11,352 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.navbar{
+  color: #0069d9;
+  margin-left: 20px;
+  font-size: larger;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Container for the auth component */
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+}
+
+/* Title styling */
+.auth-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+/* Input styling */
+.auth-input {
+  width: 300px;
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  font-size: 1em;
+}
+
+/* Button styling */
+.auth-button {
+  width: 320px;
+  padding: 10px;
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Primary Sign In/Sign Up button */
+.primary-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.primary-button:hover {
+  background-color: #45a049;
+}
+
+/* Toggle Sign In/Sign Up button */
+.toggle-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.toggle-button:hover {
+  background-color: #0069d9;
+}
+
+/* Google Sign-In button */
+.google-button {
+  background-color: #db4437;
+  color: white;
+}
+
+.google-button:hover {
+  background-color: #c33d2e;
+}
+
+/* Container styling */
+.user-type-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+}
+
+/* Title styling */
+.user-type-title {
+  font-size: 2em;
+  color: #333;
+  margin-top: 2em;
+}
+
+/* Common button styling */
+.user-type-button {
+  width: 200px;
+  padding: 12px;
+  margin: 0.5em 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Doctor button styling */
+.doctor-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.doctor-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+/* Client button styling */
+.client-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.client-button:hover {
+  background-color: #0069d9;
+  transform: scale(1.05);
+}
+
+
+/* Container styling */
+.client-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Title styling */
+.client-form-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+/* Input and select styling */
+.client-form-input,
+.client-form-select {
+  width: 300px;
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Button styling */
+.submit-button,
+.logout-button {
+  width: 320px;
+  padding: 10px;
+  margin-top: 0.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Submit button styling */
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Logout button styling */
+.logout-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #d32f2f;
+}
+
+
+/* Container styling */
+.doctor-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Title styling */
+.doctor-form-title {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  margin-bottom: 1em;
+  font-size: 0.9em;
+}
+
+/* Input styling */
+.doctor-form-input {
+  width: 300px;
+  padding: 10px;
+  margin: 0.5em 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Submit button styling */
+.submit-button {
+  width: 320px;
+  padding: 10px;
+  margin-top: 1em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+/* Container styling */
+.join-community-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Title styling */
+.join-community-title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+/* Text for instructions */
+.select-community-text {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+/* Community list styling */
+.community-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+
+.community-item {
+  margin: 10px 0;
+}
+
+/* Button for community selection */
+.community-button {
+  width: 250px;
+  padding: 10px;
+  font-size: 1.1em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.community-button:hover {
+  background-color: #0056b3;
+}
+
+/* Join community button */
+.join-community-button {
+  width: 250px;
+  padding: 12px;
+  font-size: 1.2em;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-community-button:disabled {
+  background-color: #6c757d;
+}
+
+.join-community-button:hover {
+  background-color: #218838;
+}
+
+/* Logout button styling */
+.logout-button {
+  width: 250px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+  background-color: #c82333;
+}

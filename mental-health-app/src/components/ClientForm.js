@@ -138,49 +138,101 @@ const ClientForm = () => {
   };
   //
 
-  return (
-    <div>
-      <h2>Client Form</h2>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <input
-        type="text"
-        placeholder="Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Nickname"
-        value={nickname}
-        onChange={(e) => setNickname(e.target.value)}
-      />
+//   return (
+//     <div>
+//       <h2>Client Form</h2>
+//       {error && <p style={{ color: 'red' }}>{error}</p>}
+//       <input
+//         type="text"
+//         placeholder="Name"
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//       />
+//       <input
+//         type="text"
+//         placeholder="Nickname"
+//         value={nickname}
+//         onChange={(e) => setNickname(e.target.value)}
+//       />
     
-      <input
-        type="number"
-        placeholder="Age"
-        value={age}
-        onChange={(e) => setAge(e.target.value)}
-      />
-      <select onChange={(e) => setGender(e.target.value)} value={gender}>
-        <option value="">Select Gender</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-      </select>
-      <input
-        type="text"
-        placeholder="Diseases"
-        value={diseases}
-        onChange={(e) => setDiseases(e.target.value)}
-      />
-      <button onClick={handleSubmit} disabled={loading}>
-        {loading ? 'Submitting...' : 'Submit'}
-      </button>
-      <button onClick={handleLogout} style={{ marginTop: '10px' }}>
-        Logout
-      </button>
-    </div>
-  );
+//       <input
+//         type="number"
+//         placeholder="Age"
+//         value={age}
+//         onChange={(e) => setAge(e.target.value)}
+//       />
+//       <select onChange={(e) => setGender(e.target.value)} value={gender}>
+//         <option value="">Select Gender</option>
+//         <option value="male">Male</option>
+//         <option value="female">Female</option>
+//         <option value="other">Other</option>
+//       </select>
+//       <input
+//         type="text"
+//         placeholder="Diseases"
+//         value={diseases}
+//         onChange={(e) => setDiseases(e.target.value)}
+//       />
+//       <button onClick={handleSubmit} disabled={loading}>
+//         {loading ? 'Submitting...' : 'Submit'}
+//       </button>
+//       <button onClick={handleLogout} style={{ marginTop: '10px' }}>
+//         Logout
+//       </button>
+//     </div>
+//   );
+// };
+
+return (
+  <div className="client-form-container">
+    <h2 className="client-form-title">Client Form</h2>
+    {error && <p className="error-message">{error}</p>}
+    <input
+      type="text"
+      placeholder="Name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+      className="client-form-input"
+    />
+    <input
+      type="text"
+      placeholder="Nickname"
+      value={nickname}
+      onChange={(e) => setNickname(e.target.value)}
+      className="client-form-input"
+    />
+    <input
+      type="number"
+      placeholder="Age"
+      value={age}
+      onChange={(e) => setAge(e.target.value)}
+      className="client-form-input"
+    />
+    <select
+      onChange={(e) => setGender(e.target.value)}
+      value={gender}
+      className="client-form-select"
+    >
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+    <input
+      type="text"
+      placeholder="Diseases"
+      value={diseases}
+      onChange={(e) => setDiseases(e.target.value)}
+      className="client-form-input"
+    />
+    <button onClick={handleSubmit} disabled={loading} className="submit-button">
+      {loading ? 'Submitting...' : 'Submit'}
+    </button>
+    <button onClick={handleLogout} className="logout-button">
+      Logout
+    </button>
+  </div>
+);
 };
 
 export default ClientForm;

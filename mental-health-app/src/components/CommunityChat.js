@@ -43,32 +43,34 @@ const CommunityChat = ({ user }) => {
     }
   };
 
-  return (
-    <div>
-      <h2>Community: {community}</h2>
-      <select onChange={(e) => setCommunity(e.target.value)}>
-        <option value="General">General</option>
-        <option value="Support">Support</option>
-        <option value="MentalHealth">Mental Health</option>
-      </select>
-      <div>
-        {messages.map((msg, index) => (
-          <p key={index}><strong>{msg.author}:</strong> {msg.text}</p>
-        ))}
-      </div>
-      <input
-        type="text"
-        placeholder="Type a message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-      />
-      <button onClick={handleSend}>Send</button>
+//   
 
-      <button onClick={handleLogout} style={{ marginTop: '20px' }}>
-        Logout
-      </button>
+return (
+  <div>
+    <h2>Community: {community}</h2>
+    <select onChange={(e) => setCommunity(e.target.value)}>
+      <option value="General">General</option>
+      <option value="Support">Support</option>
+      <option value="MentalHealth">Mental Health</option>
+    </select>
+    <div>
+      {messages.map((msg, index) => (
+        <p key={index}><strong>{msg.author}:</strong> {msg.text}</p>
+      ))}
     </div>
-  );
+    <input
+      type="text"
+      placeholder="Type a message"
+      value={message}
+      onChange={(e) => setMessage(e.target.value)}
+    />
+    <button onClick={handleSend}>Send</button>
+
+    <button onClick={handleLogout} style={{ marginTop: '20px' }}>
+      Logout
+    </button>
+  </div>
+);
 };
 
 export default CommunityChat;

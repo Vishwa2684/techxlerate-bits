@@ -90,8 +90,8 @@ const JoinCommunity = () => {
   };
 
   return (
-    <div>
-      <h2>Join a Community</h2>
+    <div className="doctor-form-container">
+      <h2 className="doctor-form-title">Join a Community</h2>
       <p>Select a community to join:</p>
       <ul>
         {communities.map((community, index) => (
@@ -102,12 +102,12 @@ const JoinCommunity = () => {
           </li>
         ))}
       </ul>
-      <button onClick={handleJoinCommunity} disabled={!selectedCommunity}>
+      <button className="submit-button" onClick={handleJoinCommunity} disabled={!selectedCommunity}>
         Join {selectedCommunity || 'Community'}
       </button>
 
       {/* Logout button */}
-      <button onClick={handleLogout} style={{ marginTop: '20px' }}>
+      <button className="submit-button" onClick={handleLogout} style={{ marginTop: '20px' }}>
         Logout
       </button>
     </div>

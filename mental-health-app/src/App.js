@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <div>
-        <h1>Community Mental Health Support</h1>
+        <h1 className='navbar'> Community Mental Health Support</h1>
         <Routes>
           <Route path="/" element={!user ? <Auth onAuthSuccess={() => setUser(auth.currentUser)} /> : <UserTypeSelection />} />
           <Route path="/doctor-form" element={<DoctorForm />} />

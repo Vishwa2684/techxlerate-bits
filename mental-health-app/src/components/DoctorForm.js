@@ -45,44 +45,48 @@ const DoctorForm = () => {
     }
   };
 
+
+
+
+  
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      <h2 className="text-2xl font-bold mb-6">Doctor Registration Form</h2>
+    <div className="doctor-form-container">
+      <h2 className="doctor-form-title">Doctor Registration Form</h2>
       {error && (
-        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+        <div className="error-message">
           {error}
         </div>
       )}
-      <div className="space-y-4">
+     
         <input
           type="text"
           placeholder="Full Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full p-2 border rounded"
+          className="doctor-form-input"
         />
         <input
           type="text"
           placeholder="Qualification"
           value={qualification}
           onChange={(e) => setQualification(e.target.value)}
-          className="w-full p-2 border rounded"
+          className="doctor-form-input"
         />
         <input
           type="text"
           placeholder="Certificate Number"
           value={certificateNumber}
           onChange={(e) => setCertificateNumber(e.target.value)}
-          className="w-full p-2 border rounded"
+          className="doctor-form-input"
         />
         <button
           onClick={handleSubmit}
           disabled={isLoading}
-          className="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600 disabled:bg-gray-400"
+          className="submit-button"
         >
           {isLoading ? 'Submitting...' : 'Submit'}
         </button>
-      </div>
+  
     </div>
   );
 };

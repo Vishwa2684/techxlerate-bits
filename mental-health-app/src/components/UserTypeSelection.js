@@ -14,10 +14,10 @@ const UserTypeSelection = () => {
   };
 
   return (
-    <div>
-      <h2>Select Your Role</h2>
-      <button onClick={() => handleUserTypeSelection('doctor')}>Doctor</button>
-      <button onClick={() => handleUserTypeSelection('client')}>Client</button>
+    <div className="user-type-container">
+      <h2 className="user-type-title">Select Your Role</h2>
+      <button className="user-type-button doctor-button" onClick={() => handleUserTypeSelection('doctor')}>Doctor</button>
+      <button className="user-type-button client-button" onClick={() => handleUserTypeSelection('client')}>Client</button>
     </div>
   );
 };
