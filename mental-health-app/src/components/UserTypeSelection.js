@@ -1,6 +1,9 @@
 // src/components/UserTypeSelection.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import {auth} from '../firebaseConfig';
+import { db } from '../firebaseConfig';
+import { collection, addDoc,getDoc } from 'firebase/firestore';
 
 const UserTypeSelection = () => {
   const navigate = useNavigate();

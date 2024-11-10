@@ -89,41 +89,43 @@ const ClientForm = () => {
 
   const handleSubmit = async () => {
     // Check if the user is authenticated
-    if (!auth.currentUser) {
-      setError('User not authenticated. Please log in.');
-      return;
-    }
-    console.log(auth?.currentUser)
-    // Check if all required fields are filled
-    if (!name || !nickname || !age || !gender || !diseases) {
-      setError('Please fill in all fields.');
-      return;
-    }
+    navigate('/community');
+    // if (!auth.currentUser) {
+    //   setError('User not authenticated. Please log in.');
+    //   return;
+    // }
+    // console.log(auth?.currentUser)
+    // // Check if all required fields are filled
+    // if (!name || !nickname || !age || !gender || !diseases) {
+    //   setError('Please fill in all fields.');
+    //   return;
+    // }
 
     setLoading(true);
     setError(null);
     
     const userId = auth.currentUser.uid;
 
-    try {
-      // Store data in Firestore
-      await setDoc(doc(db, 'clients', userId), {
-        name,
-        nickname,
-        userId:auth?.currentUser.uid,
-        age: parseInt(age), // Store age as a number
-        gender,
-        diseases,
-        createdAt: new Date().toISOString()
-      });
+    // try {
+    //   // Store data in Firestore
+    //   await setDoc(doc(db, 'clients', userId), {
+    //     name,
+    //     nickname,
+    //     userId:auth?.currentUser.uid,
+    //     age: parseInt(age), // Store age as a number
+    //     gender,
+    //     diseases,
+    //     createdAt: new Date().toISOString(),
+    //     verified:true
+    //   });
       
-      setLoading(false);
-      navigate('/community');
-    } catch (e) {
-      console.error('Error saving data to Firestore:', e);
-      setError('Failed to save data. Please try again.');
-      setLoading(false);
-    }
+    //   setLoading(false);
+    //   // navigate('/community');
+    // } catch (e) {
+    //   console.error('Error saving data to Firestore:', e);
+    //   setError('Failed to save data. Please try again.');
+    //   setLoading(false);
+    // }
   };
 
   //
