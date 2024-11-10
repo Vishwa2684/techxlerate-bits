@@ -74,7 +74,7 @@
 // src/components/ClientForm.js
 import React, { useState } from 'react';
 import { db, auth } from '../firebaseConfig';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, setDoc,signOut } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 
 const ClientForm = () => {
@@ -125,6 +125,18 @@ const ClientForm = () => {
     }
   };
 
+  //
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      navigate('/'); // Redirect to login page after logout
+    } catch (error) {
+      console.error('Error logging out:', error);
+      setError('Failed to log out. Please try again.');
+    }
+  };
+  //
+
   return (
     <div>
       <h2>Client Form</h2>
@@ -162,6 +174,9 @@ const ClientForm = () => {
       />
       <button onClick={handleSubmit} disabled={loading}>
         {loading ? 'Submitting...' : 'Submit'}
+      </button>
+      <button onClick={handleLogout} style={{ marginTop: '10px' }}>
+        Logout
       </button>
     </div>
   );

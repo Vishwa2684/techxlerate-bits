@@ -2,11 +2,23 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, addDoc, query, onSnapshot, orderBy } from 'firebase/firestore';
+import { auth,signOut } from '../firebaseConfig'; 
+import { useNavigate } from 'react-router-dom';
 
 const CommunityChat = ({ user }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [community, setCommunity] = useState('General');
+  const navigate = useNavigate()
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();  // Firebase logout
+      navigate('/');  // Redirect to the login or home page after logging out
+    } catch (error) {
+      console.error('Logout error:', error);
+    }
+  };
+
 
   useEffect(() => {
     const q = query(
@@ -51,6 +63,10 @@ const CommunityChat = ({ user }) => {
         onChange={(e) => setMessage(e.target.value)}
       />
       <button onClick={handleSend}>Send</button>
+
+      <button onClick={handleLogout} style={{ marginTop: '20px' }}>
+        Logout
+      </button>
     </div>
   );
 };
