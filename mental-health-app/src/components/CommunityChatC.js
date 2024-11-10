@@ -12,8 +12,8 @@ const CommunityChatC = ({ user }) => {
   const navigate = useNavigate()
   const handleLogout = async () => {
     try {
-      await auth.signOut();  // Firebase logout
-      navigate('/');  // Redirect to the login or home page after logging out
+      await auth.signOut();  
+      navigate('/');  
     } catch (error) {
       console.error('Logout error:', error);
     }

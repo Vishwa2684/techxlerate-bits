@@ -1,4 +1,4 @@
-// src/Forum.js
+
 import React, { useState, useEffect } from "react";
 import { db } from "./firebaseConfig";
 import { addDoc, collection, query, onSnapshot } from "firebase/firestore";

@@ -1,4 +1,4 @@
-// src/components/DoctorMainPage.js
+
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebaseConfig'; // Ensure you have Firebase initialized here
 import { collection, addDoc, onSnapshot, doc, updateDoc } from 'firebase/firestore';
@@ -9,7 +9,6 @@ const DoctorMainPage = ({ user }) => {
   const [conversations, setConversations] = useState([]);
   const [selectedConversation, setSelectedConversation] = useState(null);
 
-  // Fetch conversations
   useEffect(() => {
     const conversationsRef = collection(db, 'doctors', user.uid, 'conversations');
     const unsubscribe = onSnapshot(conversationsRef, (snapshot) => {
@@ -23,7 +22,6 @@ const DoctorMainPage = ({ user }) => {
     return unsubscribe;
   }, [user.uid]);
 
-  // Handle community creation
   const handleCreateCommunity = async () => {
     if (communityCreated) return;
     try {
@@ -39,7 +37,7 @@ const DoctorMainPage = ({ user }) => {
     }
   };
 
-  // Handle availability toggle
+
   const toggleAvailability = async () => {
     setAvailability(!availability);
     try {
@@ -64,7 +62,6 @@ const DoctorMainPage = ({ user }) => {
         )}
       </div>
 
-      {/* Availability Toggle */}
       <div className="availability-section">
         <h3>Availability</h3>
         <button onClick={toggleAvailability}>
@@ -73,7 +70,7 @@ const DoctorMainPage = ({ user }) => {
         <p>{availability ? "You are available for consultations." : "You are currently unavailable."}</p>
       </div>
 
-      {/* Conversations List */}
+
       <div className="conversations-section">
         <h3>Your Conversations</h3>
         <ul>
@@ -89,12 +86,10 @@ const DoctorMainPage = ({ user }) => {
         </ul>
       </div>
 
-      {/* Selected Conversation Details */}
       {selectedConversation && (
         <div className="conversation-details">
           <h3>Conversation with {selectedConversation.clientName}</h3>
           <p>{selectedConversation.messages}</p>
-          {/* Display messages and personal chat interface here */}
         </div>
       )}
     </div>

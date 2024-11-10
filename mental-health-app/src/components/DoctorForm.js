@@ -23,8 +23,6 @@ const DoctorForm = () => {
       if (!userId) {
         throw new Error('User not authenticated');
       }
-
-      // Store data in Firestore
       const doctorData = {
         name,
         userId,

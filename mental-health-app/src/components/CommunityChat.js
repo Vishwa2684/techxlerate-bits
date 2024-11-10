@@ -1,4 +1,4 @@
-// src/components/CommunityChat.js
+
 import React, { useState, useEffect } from 'react';
 import { db } from '../firebaseConfig';
 import { collection, addDoc, query, onSnapshot, orderBy } from 'firebase/firestore';

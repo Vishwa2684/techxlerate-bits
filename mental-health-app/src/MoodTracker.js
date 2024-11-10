@@ -1,4 +1,4 @@
-// src/MoodTracker.js
+
 import React, { useState } from "react";
 import { db } from "./firebaseConfig";
 import { addDoc, collection } from "firebase/firestore";
@@ -8,11 +8,11 @@ const MoodTracker = () => {
   const [sentiment, setSentiment] = useState(null);
 
   const analyzeMood = async () => {
-    // Placeholder sentiment analysis - Replace with a real API or model call
+  
     const isPositive = mood.toLowerCase().includes("happy");
     setSentiment(isPositive ? "positive" : "negative");
 
-    // Store mood entry in Firestore
+  
     await addDoc(collection(db, "moodEntries"), {
       mood,
       sentiment,
